@@ -30,9 +30,9 @@ keyword: "Javascript"
 weibo_username:     2950950297
 # zhihu_username:     ai-er-lan-xue-da
 github_username:    jackdon
-# twitter_username:   iconie_alloy
-# facebook_username:  xiaotao.nie.5
-# linkedin_username:  小涛-聂-80964aba
+# twitter_username: 
+# facebook_username: 
+# linkedin_username: 
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
