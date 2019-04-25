@@ -95,10 +95,20 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: true
   tab_replace:
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess 
+  theme: 'default'
+  line_number: false    # default false 
+  # custom_css: 'path/to/your/custom.css'     # optional
+
+medium_image_plugin:
+  image_path: 'images'
+  max_width: 760
 
 # Category & Tag
 default_category: uncategorized

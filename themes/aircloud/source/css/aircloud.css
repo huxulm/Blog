@@ -643,6 +643,7 @@ body {
 .post-content a {
   text-decoration: none;
   color: #4990E2;
+  overflow-wrap: break-word;
 }
 .post-content p {
   color: #404040;
@@ -674,9 +675,9 @@ body {
 .post-content pre {
   text-indent: 0;
   padding: 10px;
+  overflow: scroll;
 }
 .post-content pre code {
-  color: white;
   line-height: 175%;
 }
 .post-content h1 {

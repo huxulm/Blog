@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm i -g yarn hexo-cli && \
+    hexo clean && hexo g && \
     npm i
 
 EXPOSE 4000
