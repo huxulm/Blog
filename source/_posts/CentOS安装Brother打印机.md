@@ -40,7 +40,7 @@ sudo ./linux-brprinter-installer
 
 ### 提示`Will you specify the Device URI? [Y/n]时:
 - USB连接选择`n`
-- 网络共享连接浏览器打开: (http://localhost:631/printers/)[http://localhost:631/printers/]
+- 网络共享连接浏览器打开: [http://localhost:631/printers/](http://localhost:631/printers/)
   - 选择`Printer`
   - 选择`Modify Printer`
   - 输入sudo用户名密码
