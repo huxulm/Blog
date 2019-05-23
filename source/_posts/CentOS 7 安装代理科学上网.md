@@ -2,7 +2,9 @@
 layout: post
 title: CentOS 7 安装代理科学上网
 date: 2019-05-16 10:11:00
-tags: CentOS 代理
+tags: 
+  - CentOS
+  - 代理
 ---
 
 ### 搭建 Shadowsocks 代理服务器
@@ -21,26 +23,26 @@ tags: CentOS 代理
 ```bash
 tar -xvf shadowsocks-libev-3.2.5.tar.gz
 
-### 安装构建依赖
+# 安装构建依赖
 yum install epel-release -y
 yum install gcc gettext autoconf libtool \
 automake make pcre-devel asciidoc xmlto \
 c-ares-devel libev-devel libsodium-devel mbedtls-devel -y
 
-### 安装
+# 安装
 cd shadowsocks-libev-3.2.5
 ./configure  # 可以 --help 查看更多选项
 make
 make install
 ```
 
-运行
+2. 运行
 
 ```bash
 ls /usr/local/bin/ | grep ss-
 ```
 
-可以看到:
+3. 可以看到:
 
 ```bash
 ss-local
@@ -51,7 +53,7 @@ ss-server
 ss-tunnel
 ```
 
-创建 ss 服务器配置:
+4. 创建 ss 服务器配置:
 
 ```bash
 mkdir -p /etc/shadowsocks-libev
@@ -69,15 +71,17 @@ cat <<EOF >> /etc/shadowsocks-libev/ss-server.json
 EOF
 ```
 
-启动服务
+5. 启动服务
 
 ```bash
 nohup ss-server -c /etc/shadowsocks-libev/ss-server.json &>/dev/null &
 ```
+也可以使用[systemd](https://www.freedesktop.org/wiki/Software/systemd/)，实现开机启动(貌似不大需要).
 
-客户端使用:
+
+### 客户端使用
 安装过程同上。
-创建客户端配置文件:
+1. 创建客户端配置文件:
 
 ```bash
 # ss-client.json
@@ -93,15 +97,13 @@ nohup ss-server -c /etc/shadowsocks-libev/ss-server.json &>/dev/null &
 }
 ```
 
-客户端启动:
+2. 客户端启动:
 
 ```bash
 nohup ss-local -c ss-client.json &>/dev/null &
 ```
 
 ### 使用 privoxy 实现 HTTP 代理
-
-[原文](https://note.xdq.me/centos-7-an-zhuang-privoxy-2/)
 
 安装编译工具
 
@@ -164,10 +166,11 @@ vi /usr/local/etc/privoxy/config
 
 增加
 
-```
+```bash
 forward-socks5 / 127.0.0.1:1080 .
 forward 10.*.*.*/ .
 forward 192.168.*.*/ .
 forward 127.*.*.*/ .
 forward localhost/ .
 ```
+systemctl重启 privoxy
