@@ -41,6 +41,7 @@
   font-size: 15px;
   text-indent: 4em;
   color: #333333;
+  padding: 2rem;
   font-weight: 300;
   >table, >table tr th, >table tr td { border:1px solid #e7e8e9; }
   table { border-collapse: collapse;}
@@ -146,4 +147,10 @@
 
 .post-content li p {
   display: inline;
+}
+
+@media screen and (max-width: 680px) {
+  .post-content {
+    padding: 0;
+  }
 }

@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Site settings
 # 网站综合内容设置：
-SEOTitle: 许令明 | Bruce Xu's
+SEOTitle: 许令明 | Bruce Xu
 email: janeysessions@gmail.com
 description: "许令明的博客"
 keyword: "Javascript"
@@ -71,7 +71,7 @@ search:
 
 # 文章样式(是否首行缩进)：
 post_style:
-  indent: default
+  indent: false
 
 # Custom Setting End
 # Directory
