@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CentOS 7 安装代理科学上网
+title: CentOS 7 科学上网
 date: 2019-05-16 10:11:00
 tags: 
   - CentOS
