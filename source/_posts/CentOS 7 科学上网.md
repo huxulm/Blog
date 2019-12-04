@@ -77,7 +77,15 @@ EOF
 nohup ss-server -c /etc/shadowsocks-libev/ss-server.json &>/dev/null &
 ```
 也可以使用[systemd](https://www.freedesktop.org/wiki/Software/systemd/)，实现开机启动(貌似不大需要).
-
+ 
+除了从源码构建，更方便的方式是使用yum源安装。shadowsocks-libev在[Fedora Copr]("https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/")上有repo文件。我们只需要下载到/etc/yum.repos.d/然后用yum安装就行了。:
+```sh
+cd /etc/yum.repos.d/
+wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+yum clean all
+yum makecache
+yum install shadowsocks-libev -y
+```
 
 ### 客户端使用
 安装过程同上。
