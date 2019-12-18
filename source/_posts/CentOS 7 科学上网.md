@@ -86,6 +86,14 @@ yum clean all
 yum makecache
 yum install shadowsocks-libev -y
 ```
+可能需要手动安装的依赖:
+```
+wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mbedtls-2.7.12-1.el7.x86_64.rpm
+
+wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/l/libsodium-1.0.18-1.el7.x86_64.rpm
+
+rpm -Uvh *.rpm
+```
 
 ### 客户端使用
 安装过程同上。
